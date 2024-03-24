@@ -7,15 +7,17 @@
         myCards
       }
     },
+    methods:{
+      getImagePath(image){
+        return new URL(`../../../public/img/${image}`, import.meta.url).href;
+      }
+    },
     computed:{
         cardCycle() {
         return (this.myCards.products);
       }
     }
-
-
   }
-
 
 </script>
 
@@ -25,8 +27,9 @@
   v-for="(item, index) in cardCycle" 
   :key="index" 
   class="container-card">
-    <div class="card-relaxed">
-      <img :src="item.frontImage" alt="">
+  
+    <div>
+      <img :src="getImagePath(item.frontImage)" alt="immagine prodotto">
     </div>
     <div class="text relaxed">
       <span class="brand">{{ item.brand }} </span>
@@ -44,12 +47,17 @@
 
   @use '../../assets/scss/main.scss';
 
+
+
   .container-card{
-    width: 400px;
-    height: 700px;
+    width: 300px;
+    height: 600px;
     margin: 10px;
     position: relative;
     color: black;
+    img{
+      object-fit: cover;
+    }
   }
 
 </style>
