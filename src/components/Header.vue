@@ -20,6 +20,11 @@
   <header class="dritto">
         <section class="container header">
           <div class="options">
+            <!-- <ul>
+              <li> Donna</li>
+              <li>Uomo</li>
+              <li>Bambino</li>
+            </ul> -->
             <span>Donna</span>
             <span>Uomo</span>
             <span>Bambino</span>
@@ -29,9 +34,15 @@
             <img class="logo" :src="getImagePath(immagine)" alt="logo">
           </div>
     
-          <div>
-            logo piccolo
-          </div>
+          <div class="col">
+      <nav>
+        <ul class="social-menu">
+          <span><i class="fa-regular fa-user"></i></span>
+          <span><i class="fa-regular fa-heart"></i></span>
+          <span><i class="fa-regular fa-bag-shopping"></i></span>
+        </ul>
+      </nav>
+    </div>
         </section>
       </header>
 
@@ -54,6 +65,14 @@ header{
       
       .options{
       padding-right: 10px;
+        span{
+          font-size: 1rem;
+          padding: 10px;
+          
+          &:hover{
+            text-decoration: underline;
+          }
+        }
       } 
       .small-logo{
         max-width: 40%;
@@ -65,6 +84,13 @@ header{
       }
     }
   }
+}
+
+span .fa-regular{
+  padding: 10px;
+  &:hover{
+    text-decoration: underline;
+    }
 }
 
 </style>

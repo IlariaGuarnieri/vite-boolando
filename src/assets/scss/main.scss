@@ -1,6 +1,7 @@
-@import './partials/general';
-
-@import './partials/variables';
+@use './partials/general';
+@use './partials/variables';
+@use './partials/utils';
+@use './partials/typo'
 
 
 // collego i pezzi di scss in main
