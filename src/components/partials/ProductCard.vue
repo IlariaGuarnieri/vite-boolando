@@ -48,7 +48,7 @@
     <div class="text relaxed">
       <span class="brand">{{ item.brand }} </span>
       <span class="hearts">&hearts;</span>
-        <div class="sconto">{{item.badges.value}}</div>
+        <div class="sconto">-50%</div>
         <div class="sostenibilità"> Sostenibilità</div>
       <h1 class="clothes-name">{{ item.name }}</h1>
       <span class="solded-price">{{ item.price }} &euro;</span>
@@ -97,7 +97,7 @@
 .sconto{
   position: absolute;
   top: 450px;
-  left:40px ;
+  left:30px ;
   background-color: red;
   color: white;
 }
@@ -105,7 +105,7 @@
 .sostenibilità{
   position: absolute;
   top: 450px;
-  left: 80px;
+  left: 70px;
   background-color: green;
   color: white;
 }
@@ -113,7 +113,7 @@
 .hearts{
   font-size: 30px;
   position: absolute;
-  left: 310px;
+  left: 270px;
   top: 20px;
   background-color: white;
   width: 40px;
